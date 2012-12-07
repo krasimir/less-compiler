@@ -18,11 +18,11 @@ exports.init = function(config) {
     var watch = {
         path: config.pathToWatch,
         listener: function(eventName, filePath, fileCurrentStat, filePreviousStat) {
-            shell.exec(config.lesscPath + ' ' + config.fileToCompile + ' > ' + config.destination, function(code, output) {
+            shell.exec("node " + config.lesscPath + ' ' + config.fileToCompile + ' > ' + config.destination, function(code, output) {
                 if(code === 0) {
                     console.log('less compiled successfully');
                 } else {
-                    console.log('less compilation failed. ' + output);
+                    console.log('less compilation failed');
                 }
             });
         },
