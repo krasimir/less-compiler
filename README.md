@@ -11,7 +11,7 @@ The main purpose of the module is to compile your .less files automatically. It 
 
 ## Usage
 
-    require("less-compiler").init({
+    require("lesscompile").init({
         "pathToWatch": [path to your less files],
         "fileToCompile": [your main less file],
         "destination": [.css file as a destination]
