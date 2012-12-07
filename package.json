@@ -1,6 +1,6 @@
 {
   "name": "lesscompile",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "compilation of project's less",
   "main": "index.js",
   "author": "Krasimir Tsonev",
