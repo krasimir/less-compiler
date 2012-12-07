@@ -1,6 +1,7 @@
 {
   "name": "lesscompile",
   "version": "0.0.1",
+  "homepage": "https://github.com/krasimir/less-compiler",
   "description": "compilation of project's less",
   "main": "index.js",
   "author": "Krasimir Tsonev",
@@ -9,5 +10,16 @@
     "watchr": "latest",
     "less": "latest",
     "shelljs": "latest"
+  },
+  "keywords": [
+    "watching",
+    "watch",
+    "fswatcher",
+    "watchfile",
+    "fs"
+  ],
+  "repository" : {
+    "type": "git",
+    "url": "https://github.com/krasimir/less-compiler.git"
   }
 }
