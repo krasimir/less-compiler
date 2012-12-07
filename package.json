@@ -1,0 +1,13 @@
+{
+  "name": "lesscompile",
+  "version": "0.0.0",
+  "description": "compilation of project's less",
+  "main": "index.js",
+  "author": "Krasimir Tsonev",
+  "license": "BSD",
+  "dependencies": { 
+    "watchr": "latest",
+    "less": "latest",
+    "shelljs": "latest"
+  }
+}
