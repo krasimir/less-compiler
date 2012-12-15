@@ -25,4 +25,14 @@ example:
         "destination": __dirname + "/compiled/styles.css"
     });
 
+or with callback: 
+
+    require("lesscompile").init({
+        "pathToWatch": __dirname + "/less",
+        "fileToCompile": __dirname + "/less/main.less",
+        "destination": __dirname + "/compiled/styles.css"
+    }).onCompile(function() {
+        console.log("callback called");
+    });
+
 The usage of absolute paths is recommended.
