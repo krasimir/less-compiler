@@ -35,4 +35,14 @@ or with callback:
         console.log("callback called");
     });
 
+If you know when the compiler started to watch:
+
+    require("lesscompile").init({
+        "pathToWatch": __dirname + "/less",
+        "fileToCompile": __dirname + "/less/main.less",
+        "destination": __dirname + "/compiled/styles.css"
+    }).ready(function() {
+        console.log("I'm ready ...");
+    });
+
 The usage of absolute paths is recommended.
