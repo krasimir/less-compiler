@@ -2,6 +2,12 @@ var shell = require('shelljs');
 var watchr = require('watchr');
 var less = require("less");
 var fs = require('fs');
+var callbackOnCompilation = null;
+
+exports.onCompile = function(callback) {
+    callbackOnCompilation = callback;
+    return exports;
+}
 
 exports.init = function(config) {
 
@@ -21,6 +27,9 @@ exports.init = function(config) {
             shell.exec("node " + config.lesscPath + ' ' + config.fileToCompile + ' > ' + config.destination, function(code, output) {
                 if(code === 0) {
                     console.log('less compiled successfully');
+                    if(callbackOnCompilation) {
+                        callbackOnCompilation();
+                    }
                 } else {
                     console.log('less compilation failed');
                 }
@@ -38,6 +47,8 @@ exports.init = function(config) {
     if(!config.destination) throw new Error("Missing config parameter 'destination'.");
 
     watchr.watch(watch);
+    
+    return exports;
 };
 
 
