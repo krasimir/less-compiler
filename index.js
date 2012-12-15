@@ -3,10 +3,15 @@ var watchr = require('watchr');
 var less = require("less");
 var fs = require('fs');
 var callbackOnCompilation = null;
+var readyCallback = null;
 
 exports.onCompile = function(callback) {
     callbackOnCompilation = callback;
     return exports;
+}
+
+exports.ready = function(callback) {
+    readyCallback = callback;
 }
 
 exports.init = function(config) {
@@ -38,6 +43,9 @@ exports.init = function(config) {
         next: function(err, watcher){
             if (err)  throw err;
             console.log('less-compiler watching started ...');
+            if(readyCallback) {
+                readyCallback();
+            }
         }
     };
 

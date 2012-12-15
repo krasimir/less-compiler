@@ -4,4 +4,6 @@ require("../index.js").init({
     "destination": __dirname + "/compiled/styles.css"
 }).onCompile(function() {
     console.log("callback called");
+}).ready(function() {
+    console.log("less-compiler is ready");
 });
