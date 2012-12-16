@@ -50,9 +50,8 @@ exports.init = function(config) {
         if(!config.fileToCompile) throw new Error("Missing config parameter 'fileToCompile'.");
         if(!config.destination) throw new Error("Missing config parameter 'destination'.");
         watchr.watch(watch);
-    } else {
-        exports.compile(config);
     }
+    exports.compile(config);
     
     return exports;
 };

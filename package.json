@@ -1,6 +1,6 @@
 {
   "name": "lesscompile",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "homepage": "https://github.com/krasimir/less-compiler",
   "description": "compilation of project's less",
   "main": "index.js",
