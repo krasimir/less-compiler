@@ -37,7 +37,7 @@ or with callback:
         console.log("the compiled css: ", css);
     });
 
-If you know when the compiler started to watch:
+If you need to know when the compiler started to watch:
 
     require("lesscompile").init({
         pathToWatch: __dirname + "/less",
